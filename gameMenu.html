@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="menuModel.css">
+</head>
+<body bgcolor= "bisque">
+  <div class = "header">
+    <div class = "title">
+      <h1>
+        プチプチ潰し大会
+      </h1>
+
+    </div>
+  </div>
+  <div class = menu>
+    <p id = "welcome">ようこそ</p>
+    <button id = "startButtun">スタート</button>
+    <button id = "endlessButtun">エンドレス</button>
+  </div>
+
+
+  <script>
+    // クリックでスタート(通常モード)
+    
+    document.getElementById("startButtun").onclick = function() {
+      location.href = "http://localhost:8888/game/gamePage.php";
+    };
+
+    // クリックでスタート(エンドレスモード)
+    document.getElementById("endlessButtun").onclick = function() {
+      open("endlessPage.php", "_blank");
+   };
+  //  隠し要素的なポップアップ
+    document.getElementById("welcome").onclick = function() {
+      window.setTimeout(function(){
+        alert("ようこそ");
+      }, 5000);
+      };
+  </script>
+
+</body>
+</html>
