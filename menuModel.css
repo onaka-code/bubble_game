@@ -1,0 +1,56 @@
+.header {
+  background-color:bisque;
+  margin:0px;
+  padding:0px;
+}
+
+.title {
+  animation: fadeIn 2s linear 0.3s 1 normal;
+  text-align:center;
+}
+
+@keyframes fadeIn{
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.menu{
+  animation: fadeIn 2s linear 0.3s 1 normal;
+  margin-bottom:40px;
+  font-size:40px;
+  text-align:center;
+}
+
+#startButtun{
+  background-color: white;
+  display:inline-block;
+  cursor:pointer;
+  border:1px solid #232323;
+  width :200px;
+  height:50px;
+  font-size:30px;
+  text-align: center;
+  animation: move-y .8s infinite alternate ease-in-out;
+  
+}
+
+#endlessButtun{
+  background-color:white;
+  display:inline-block;
+  cursor:pointer;
+  border:1px solid #232323;
+  width :200px;
+  height:50px;
+  font-size:30px;
+  text-align: center;
+  animation: move-y .8s infinite alternate ease-in-out;
+}
+
+@keyframes move-y {
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform: translateY(10px);
+  }
+}
