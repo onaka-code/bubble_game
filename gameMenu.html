@@ -22,8 +22,24 @@
     <button id = "endlessButtun">エンドレス</button>
   </div>
   <div class = "rule">
-    <p>ルール説明</p>
-    <div class = "triangle"></div>
+    <p class = "ruleExplain">ルール説明</p>
+    <div class = "triangle1"></div>
+    <div class = "fade-in fade-in-up">
+      <p>「スタート」を押すと、プチプチが出現しカウントがスタートします</p>
+      <div class = "bubble"></div>
+      <div class = "triangle2"></div>
+    </div>
+    <div class = "fade-in fade-in-left">
+      <p>クリックでプチプチを割っていきましょう</p>
+      <div class = "bubble"></div>
+      <div class = "triangle2"></div>
+    </div>
+    <div class = "fade-in fade-in-right">
+      <p>10個プチプチを割ると、得点源となる特別なプチプチが出現します</p>
+      <div class = "target"></div>
+      <div class = "triangle2"></div>
+    </div>
+    <p class = "fade-in fade-in-down">高得点を目指しつつ、皆でプチプチしていきましょう！</p>
   </div>
 
   <script>
@@ -43,6 +59,19 @@
         alert("ようこそ");
       }, 5000);
       };
+
+    const fadeInTarget = document.querySelectorAll(".fade-in");
+    window.addEventListener('scroll', function(){
+      for(let i = 0; i < fadeInTarget.length; i++){
+        const rect = fadeInTarget[i].getBoundingClientRect().top;
+        const scroll = window.pageYOffset;
+        const offset = rect + scroll;
+        const windowHeight = window.innerHeight;
+        if(scroll > offset - windowHeight + 150){
+          fadeInTarget[i].classList.add('scroll-in');
+        }
+      }
+    });
   </script>
 
   <footer>
