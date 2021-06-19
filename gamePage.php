@@ -7,6 +7,9 @@
   <title>プチプチゲーム</title>
 </head>
 <body>
+  <div>
+    <p class = "start" id = "startSign">スタート！</p>
+  </div>
   <div id = "displayAll">
     <p id = "countTimer" class = "countDown"></p>
   <?php 
@@ -91,6 +94,27 @@
         -webkit-user-select: none; /* Safari、Chrome */
         -ms-user-select: none; /* IE10 */
       }
+
+      .start{
+        font-size:300px;
+        color:blue;
+        position:fixed;
+        top:100px;
+        left:400px;
+        margin:0;
+        padding-left:724px;
+        display:inline-block;
+        white-space:nowrap;
+        animation-name:marquee;
+        animation-timing-function:linear;
+        animation-duration:1s;
+        animation-iteration-count:1;
+      }
+
+      @keyframes marquee{
+        from {transform:translate(0%);}
+        99%,to{transform:translate(-100%);}
+      }
   </style>
   
 
@@ -152,9 +176,14 @@
       const gameOver = setTimeout(function(){
         location.href = 'http://localhost:8888/game/gameOverPage.php?theScore=' + totalScore;
       }, 66*1000);
-
-
+      
     }
+    const startSign = document.getElementById('startSign');
+    startSign.addEventListener('animationend',function(){
+      startSign.style.display = "none";
+    });
+    
+
   </script>
 
 
