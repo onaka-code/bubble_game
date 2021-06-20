@@ -145,8 +145,8 @@
         this.classList.remove('bubble');
         this.classList.add('starburst');
         // 破裂音
-        const music = new Audio('short_punch1.mp3');
-        music.play();
+        const punk = new Audio('short_punch1.mp3');
+        punk.play();
         // 9回破裂させると得点源バブルが出現
           if(bubbleCount <= 8){
             bubbleCount++;
@@ -165,7 +165,8 @@
             star_list[j].classList.remove('starburst');
             star_list[j].classList.add('bubble');
           }
-          
+          const addScore = new Audio('damage6.mp3');
+          addScore.play();
           this.classList.remove('target');
           this.classList.add('bubble');
           bubbleCount = 0;
