@@ -53,8 +53,7 @@
       text-align: center;
       text-decoration: none;
       color: #FFF;
-      font-weight: bold;
-      text-shadow: 0 0 3em #FF2F2F, 0 0 4px #FF2F2F;
+      border-radius:64% 36% 93% 7% / 40% 76% 24% 60%; 
       border: 0.4em solid rgb(209, 185, 185);
       user-select: none; /* CSS3 */
       -moz-user-select: none; /* Firefox */

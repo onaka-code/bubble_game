@@ -104,13 +104,12 @@
   display: inline-block;
   width:100px;
   height:100px;
-  background: #FF9999;
+  background-color:rgb(248, 241, 241);
   text-align: center;
   text-decoration: none;
   color: #FFF;
-  font-weight: bold;
-  text-shadow: 0 0 3em #FF2F2F, 0 0 4px #FF2F2F;
   border: 0.4em solid rgb(209, 185, 185);
+  border-radius:64% 36% 93% 7% / 40% 76% 24% 60%; 
   user-select: none; /* CSS3 */
   -moz-user-select: none; /* Firefox */
   -webkit-user-select: none; /* Safari、Chrome */
